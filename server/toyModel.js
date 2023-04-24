@@ -6,18 +6,14 @@ const toySchema=new Schema({
     name:{
         type: String,
         required: true,
-        default:"Mystery Toy"
 
     },
     category:{
         type: String,
         required: true,
-        default:"Mystery category"
     },
     price:Number,
     picture:String,
-    user:{type: Schema.Types.ObjectId, ref:'User'}
-    
 })
 
 //Make a Model based one the Schema (Object)

@@ -10,7 +10,8 @@ const userSchema=new Schema({
     password:{
         type:String,
         required: true,
-    }
+    },
+    favorite:[{ type: Schema.Types.ObjectId, ref: 'Toy' }]
 })
 const User=mongoose.model('User',userSchema)
 //export the model so we can use it elsewhere

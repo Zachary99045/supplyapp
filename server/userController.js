@@ -132,6 +132,24 @@ async function userLogin(req,res){
     }
 }
 
+async function favoriteToy(req,res){
+// 1. get toy ID from req.body
+// 2. update user model with new ID (findOneAndUpdate())
+//  - find user
+//  - add toy ID to array 'favs' ($addToSet)
+// 3. send response
+//  - if OK, 200, success msg
+//  - if error, 500, error msg
+
+    console.log(req.body)
+
+    // create new user data object
+    try{
+        const favoriteID = req.body;
+        if(
+    }
+}
+
 
 module.exports= {
     findUser,
@@ -140,5 +158,6 @@ module.exports= {
     deleteUser,
     updateUser,
     getAllUser, 
-    userLogin
+    userLogin,
+    favoriteToy,
 }
